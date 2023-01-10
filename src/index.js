@@ -40,7 +40,7 @@ const Weather = () => {
                 <Text> Weather Data of {city}</Text>
                 <Text>{weatherData?.main.humidity}</Text>
                 <Text>{weatherData?.main.temp}</Text>
-                <Text>{weatherData?.weather[0].description}</Text>
+                {/* <Text>{weatherData?.weather[0].description}</Text> */}
             </View>: null}
             
         </View>
