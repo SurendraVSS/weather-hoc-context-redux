@@ -20,9 +20,7 @@ const Weather = () => {
                     setWeatherData(null)
                     setError(response.message)
                 }
-
                 setCity(null)
-
             }).catch(err => console.log(err))
         // 
     }
@@ -38,7 +36,7 @@ const Weather = () => {
                 <Button
                     onPress={() => getWeatherData(city)}
                     title="Search"
-                    color="#841584"
+                    color="red"
                 />
             </View>
             {weatherData == null ? <><View><Text>
