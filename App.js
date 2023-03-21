@@ -1,22 +1,28 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Weather from './src';
-import Person1 from './src/person1';
-import Person2 from './src/person2';
+import { StyleSheet, Text, TextInput, View, Button } from 'react-native';
+
+import React, { useState, useEffect, useRef } from 'react';
+import { Provider } from 'react-redux';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Home from './src/screens/Home';
+import {store} from './src/redux/store'
+const Stack = createNativeStackNavigator();
 
 export default function App() {
+
   return (
-    <View style={styles.container}>
-   <Person1 />
-   <Person2 />
-    </View>
+    <Provider store={store}>
+      <Home />
+    </Provider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent:'center',
-    alignItems: 'center',
+   justifyContent:'center',
+   alignItems:'center'
   },
 });
